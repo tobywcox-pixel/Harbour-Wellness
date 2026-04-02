@@ -1,0 +1,28 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --color-primary: #00897b; /* Vibrant teal from image */
+  --color-secondary: #10b981; /* Muted green */
+  --color-accent: #0d9488; /* Calm teal */
+  --color-navy: #004d40; /* Deep teal for headings */
+  --color-background: #f8fafc; /* Light gray */
+  --color-surface: #ffffff; /* White */
+}
+
+@layer base {
+  body {
+    @apply bg-background text-slate-900 font-sans antialiased;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-semibold tracking-tight text-navy;
+  }
+}
+
+.glass {
+  @apply bg-white/80 backdrop-blur-md border border-white/20 shadow-sm;
+}
+
+.card-hover {
+  @apply transition-all duration-300 hover:shadow-lg hover:-translate-y-1;
+}
